@@ -308,8 +308,6 @@ fieldset.champ { border: 0; padding: 0; margin: 0; }
 .bandeau-cookies .actions .bouton { min-height: 2.6rem; padding: 0.5rem 1.1rem; }
 .lien-bouton { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: none; }
 .lien-bouton:hover { color: var(--orange); }
-.agenda-consentement { display: grid; place-items: center; text-align: center; gap: 1rem; min-height: 14rem; padding: 2rem; color: var(--texte-doux); }
-.agenda-consentement p { margin: 0; }
 
 @media (max-width: 960px) {
   .deux-col, .faq-groupe, .reservation-grille { grid-template-columns: minmax(0, 1fr); }

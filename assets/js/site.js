@@ -121,19 +121,9 @@
     window.gtag("config", ID_GA);
   }
 
-  function afficherAgendas() {
-    document.querySelectorAll("iframe[data-src]").forEach(function (f) {
-      f.src = f.getAttribute("data-src");
-      f.removeAttribute("data-src");
-      f.hidden = false;
-      var attente = f.parentNode.querySelector(".agenda-consentement");
-      if (attente) attente.remove();
-    });
-  }
-
   var bandeau = document.querySelector("[data-cookies]");
   function appliquer(choix) {
-    if (choix === "oui") { chargerGA(); afficherAgendas(); }
+    if (choix === "oui") chargerGA();
   }
   var choix = lireChoix();
   if (choix) appliquer(choix);
@@ -150,9 +140,6 @@
   });
   document.querySelectorAll("[data-cookies-ouvrir]").forEach(function (b) {
     b.addEventListener("click", function () { if (bandeau) { bandeau.hidden = false; bandeau.querySelector("button").focus(); } });
-  });
-  document.querySelectorAll("[data-agenda-afficher]").forEach(function (b) {
-    b.addEventListener("click", function () { afficherAgendas(); });
   });
 
   // ---------- Adresse de contact (protégée contre les robots) ----------
