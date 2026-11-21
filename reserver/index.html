@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Réserver le chalet des Quatre Pierres | Location chalet 14 personnes, Vosges</title>
+  <meta name="description" content="Envoyez votre demande de réservation en direct : dates, nombre de personnes, options. Estimation du prix immédiate, confirmation par retour de mail.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://chalet-4-pierres-location.fr/reserver/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Le Chalet des Quatre Pierres">
+  <meta property="og:title" content="Réserver le chalet des Quatre Pierres | Location chalet 14 personnes, Vosges">
+  <meta property="og:url" content="https://chalet-4-pierres-location.fr/reserver/">
+  <meta property="og:image" content="https://chalet-4-pierres-location.fr/assets/img/vue-terrasse-1600.webp">
+  <link rel="preload" href="/assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#fafaf8">
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- debut:entete -->
+  <header class="entete">
+    <div class="conteneur entete-interieur">
+      <a class="marque" href="/" aria-label="Le Chalet des Quatre Pierres, accueil">
+        <svg viewBox="0 0 48 42" aria-hidden="true"><path d="M24 2.5 46 39.5H2Z" fill="#e07a3f" stroke="#e07a3f" stroke-width="3" stroke-linejoin="round"/><rect x="17" y="21" width="6" height="6" rx="1.6" fill="#fff"/><rect x="25" y="21" width="6" height="6" rx="1.6" fill="#fff"/><rect x="17" y="29" width="6" height="6" rx="1.6" fill="#fff"/><rect x="25" y="29" width="6" height="6" rx="1.6" fill="#fff"/></svg>
+        <span class="marque-nom">Le Chalet des Quatre&nbsp;Pierres</span>
+      </a>
+      <nav class="navigation" aria-label="Menu principal">
+        <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu">
+          <li><a href="/le-chalet/">Le chalet</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/venir/">Venir</a></li>
+          <li><a href="/hiver/">Hiver</a></li>
+          <li><a href="/ete/">Été</a></li>
+          <li><a href="/questions/">Questions</a></li>
+          <li><a class="bouton bouton-plein" href="/reserver/" aria-current="page">Faire une demande</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- fin:entete -->
+
+  <main id="contenu">
+    <section class="page-titre">
+      <div class="conteneur">
+        <h1>Demande de réservation</h1>
+        <p class="intro">Indiquez vos dates et vos options : le prix estimé s'affiche tout de suite. Nous vérifions la disponibilité et vous répondons par mail sous 48 h.</p>
+      </div>
+    </section>
+
+    <section class="bloc" aria-label="Formulaire de demande">
+      <div class="conteneur reservation-grille">
+        <form class="formulaire" name="demande" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="adresse-web" novalidate>
+          <input type="hidden" name="form-name" value="demande">
+          <p class="cache"><label>Ne pas remplir : <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
+          <div class="champs">
+            <div class="champ"><label for="nom">Nom et prénom</label><input type="text" id="nom" name="nom" autocomplete="name" required></div>
+            <div class="champ"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+            <div class="champ"><label for="telephone">Téléphone <span class="aide">(facultatif, utile le jour de l'arrivée)</span></label><input type="tel" id="telephone" name="telephone" autocomplete="tel"></div>
+            <div class="champ"><label for="personnes">Nombre de personnes <span class="aide">(14 maximum)</span></label><input type="number" id="personnes" name="personnes" min="1" max="14" inputmode="numeric" required></div>
+            <div class="champ"><label for="arrivee">Date d'arrivée</label><input type="date" id="arrivee" name="arrivee" required></div>
+            <div class="champ"><label for="depart">Date de départ</label><input type="date" id="depart" name="depart" required></div>
+          </div>
+          <fieldset class="champ">
+            <legend>Venez-vous avec des animaux ?</legend>
+            <div class="choix">
+              <label><input type="radio" name="animaux" value="non" checked> Non</label>
+              <label><input type="radio" name="animaux" value="oui"> Oui</label>
+            </div>
+          </fieldset>
+          <fieldset class="champ">
+            <legend>Options</legend>
+            <div class="option-ligne case"><label><input type="checkbox" name="option_draps" value="oui"> Draps et housses de couette</label>
+              <label for="draps_lits" class="aide">pour</label><input type="number" id="draps_lits" name="draps_lits" min="0" max="10" value="0" inputmode="numeric" aria-label="Nombre de lits pour les draps"><span class="aide">lits</span>
+              <span class="prix-option"><span data-prix="option-draps">12 €</span> par lit</span></div>
+            <div class="option-ligne case"><label><input type="checkbox" name="option_bois" value="oui"> Bois pour le poêle</label><span class="prix-option" data-prix="option-bois">50 €</span></div>
+            <div class="option-ligne case"><label><input type="checkbox" name="option_menage" value="oui"> Ménage de fin de séjour</label><span class="prix-option" data-prix="option-menage">90 €</span></div>
+          </fieldset>
+          <div class="champ"><label for="message">Message <span class="aide">(facultatif)</span></label><textarea id="message" name="message" rows="4"></textarea></div>
+          <div class="estimation" data-estimation aria-live="polite"><strong>Indiquez vos dates pour voir une estimation.</strong></div>
+          <div class="champ case"><label><input type="checkbox" id="cgv" name="cgv" value="acceptées" required> J'ai lu et j'accepte les <a href="/conditions/" target="_blank">conditions générales de location</a></label></div>
+          <div><button class="bouton bouton-plein" type="submit">Envoyer ma demande</button></div>
+        </form>
+
+        <aside>
+          <h2>Comment ça se passe</h2>
+          <ol class="etapes">
+            <li>Vous envoyez votre demande avec ce formulaire.</li>
+            <li>Nous vous confirmons les dates et le prix du séjour, et nous vous indiquons comment régler l'acompte.</li>
+            <li>Votre réservation est ferme dès réception de l'acompte de <span data-prix="acompte">250 €</span>.</li>
+            <li>Vous réglez le solde par virement 15 jours avant votre arrivée, ou sur place en espèces ou par chèque.</li>
+          </ol>
+          <h2 style="margin-top:2.5rem">Bon à savoir</h2>
+          <p>Le chalet est aussi réservable sur Booking, Abritel et Airbnb. En réservant en direct, vous échangez avec nous sans intermédiaire, et sans les frais de service des plateformes.</p>
+          <p><a href="/tarifs/#disponibilites">Voir les disponibilités</a></p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- debut:pied -->
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="pied-grille">
+        <div>
+          <a class="marque" href="/">
+            <svg viewBox="0 0 48 42" aria-hidden="true"><path d="M24 2.5 46 39.5H2Z" fill="#e07a3f" stroke="#e07a3f" stroke-width="3" stroke-linejoin="round"/><rect x="17" y="21" width="6" height="6" rx="1.6" fill="#fff"/><rect x="25" y="21" width="6" height="6" rx="1.6" fill="#fff"/><rect x="17" y="29" width="6" height="6" rx="1.6" fill="#fff"/><rect x="25" y="29" width="6" height="6" rx="1.6" fill="#fff"/></svg>
+            <span class="marque-nom">Le Chalet des Quatre&nbsp;Pierres</span>
+          </a>
+          <address>Chemin de Sérichamp, Grand Valtin<br>88230 Ban-sur-Meurthe-Clefcy</address>
+        </div>
+        <nav aria-label="Le chalet">
+          <h2>Le chalet</h2>
+          <ul>
+            <li><a href="/le-chalet/">Visiter le chalet</a></li>
+            <li><a href="/tarifs/">Tarifs et disponibilités</a></li>
+            <li><a href="/reserver/" aria-current="page">Faire une demande</a></li>
+            <li><a href="/questions/">Questions fréquentes</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Votre séjour">
+          <h2>Votre séjour</h2>
+          <ul>
+            <li><a href="/venir/">Venir au chalet</a></li>
+            <li><a href="/hiver/">L'hiver au chalet</a></li>
+            <li><a href="/ete/">L'été au chalet</a></li>
+            <li><a href="/conditions/">Conditions de location</a></li>
+            <li><a href="/mentions-legales/">Mentions légales et confidentialité</a></li>
+            <li><button class="lien-bouton" type="button" data-cookies-ouvrir>Gérer les cookies</button></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="pied-bas">Meublé de tourisme classé 4 étoiles. Taxe de séjour incluse dans les tarifs.</p>
+    </div>
+  </footer>
+
+  <div class="bandeau-cookies" role="region" aria-label="Cookies" hidden data-cookies>
+    <p>Nous mesurons la fréquentation du site avec Google Analytics, et l'agenda des disponibilités est affiché par Google Agenda. Ces services déposent des cookies seulement si vous acceptez. <a href="/mentions-legales/#confidentialite">En savoir plus</a></p>
+    <div class="actions">
+      <button class="bouton bouton-plein" type="button" data-cookies-choix="oui">Accepter</button>
+      <button class="bouton bouton-contour" type="button" data-cookies-choix="non">Refuser</button>
+    </div>
+  </div>
+  <!-- fin:pied -->
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

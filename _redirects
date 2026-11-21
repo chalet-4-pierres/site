@@ -1,0 +1,24 @@
+# Anciennes adresses du site (redirections permanentes vers les nouvelles pages)
+/index.php                                            /                           301
+/index.html                                           /                           301
+/localisation-chalet-vosges.php                       /venir/                     301
+/Le-pointu                                            /le-chalet/                 301
+/Le-pointu/                                           /le-chalet/                 301
+/Le-pointu/index.php                                  /le-chalet/                 301
+/Le-pointu/vues                                       /le-chalet/                 301
+/Le-pointu/vues/*                                     /le-chalet/                 301
+/Le-pointu/amis                                       /                           301
+/Le-pointu/amis/*                                     /                           301
+/Le-pointu/tarifs-de-location.php                     /tarifs/                    301
+/Le-pointu/tarifs-de-location.phpp                    /tarifs/                    301
+/Le-pointu/planning-de-reservation-du-pointu.php      /tarifs/#disponibilites     301
+/Le-pointu/que-faire-aux-alentours.php                /ete/                       301
+/Le-pointu/localisation-chalet-vosges.php             /venir/                     301
+/Le-pointu/vacances-d-hiver.php                       /hiver/                     301
+/Le-pointu/vacances-d-ete.php                         /ete/                       301
+/Le-pointu/chalet-ecologique.php                      /le-chalet/#ecologique      301
+/form/ecrire.php                                      /reserver/                  301
+/form/*                                               /reserver/                  301
+/images/conditions-generales-de-location.pdf          /conditions/                301
+/images/formulaire-de-location.pdf                    /reserver/                  301
+/images/formulaire-de-location-we.pdf                 /reserver/                  301

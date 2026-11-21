@@ -61,12 +61,51 @@ def traiter(chemin, prix):
         texte = re.sub(r"\{([a-z0-9-]+)\}", lambda x: prix[x.group(1)], modele)
         return m.group(1) + texte + m.group(3)
     t = re.sub(r'(<meta[^>]*\bdata-modele="([^"]+)"[^>]*\bcontent=")[^"]*(")', rempl_modele, t)
+    t = donnees_structurees(t, prix)
     chemin.write_text(t, encoding="utf-8")
+
+
+def texte_brut(fragment):
+    import html as _h
+    return " ".join(_h.unescape(re.sub(r"<[^>]+>", "", fragment)).split())
+
+
+def bloc_ld(objet):
+    return '<script type="application/ld+json">' + json.dumps(objet, ensure_ascii=False, indent=1) + "</script>"
+
+
+def donnees_structurees(t, prix):
+    if "<!-- debut:ld-faq -->" in t:
+        paires = re.findall(r"<div><dt>(.*?)</dt><dd>(.*?)</dd></div>", t, flags=re.S)
+        faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": texte_brut(q), "acceptedAnswer": {"@type": "Answer", "text": texte_brut(r)}} for q, r in paires]}
+        t = re.sub(r"(<!-- debut:ld-faq -->).*?(<!-- fin:ld-faq -->)", lambda m: m.group(1) + "\n  " + bloc_ld(faq) + "\n  " + m.group(2), t, flags=re.S)
+    if "<!-- debut:ld-chalet -->" in t:
+        chalet = {
+            "@context": "https://schema.org", "@type": "LodgingBusiness",
+            "name": "Le Chalet des Quatre Pierres",
+            "alternateName": "Le Pointu",
+            "description": "Chalet écologique en bois massif de 240 m² pour 14 personnes au Grand Valtin, à 8 km de Gérardmer. 6 chambres, une salle d'eau et des WC à chaque étage.",
+            "url": "https://chalet-4-pierres-location.fr/",
+            "image": ["https://chalet-4-pierres-location.fr/assets/img/vue-terrasse-1600.webp", "https://chalet-4-pierres-location.fr/assets/img/chalet-ete-900.webp"],
+            "address": {"@type": "PostalAddress", "streetAddress": "Chemin de Sérichamp, hameau du Grand Valtin", "postalCode": "88230", "addressLocality": "Ban-sur-Meurthe-Clefcy", "addressRegion": "Vosges", "addressCountry": "FR"},
+            "geo": {"@type": "GeoCoordinates", "latitude": 48.0964, "longitude": 6.9942},
+            "numberOfRooms": 6,
+            "petsAllowed": True,
+            "checkinTime": "16:00", "checkoutTime": "10:00",
+            "priceRange": prix["semaine-min"] + " – " + prix["semaine-max"] + " la semaine",
+            "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": n, "value": True} for n in ["Wifi", "Poêle à bois", "Lave-vaisselle", "Lave-linge", "Sèche-linge", "Terrasse", "Local à skis", "Lit bébé"]],
+            "starRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5", "name": "Meublé de tourisme classé 4 étoiles"},
+        }
+        t = re.sub(r"(<!-- debut:ld-chalet -->).*?(<!-- fin:ld-chalet -->)", lambda m: m.group(1) + "\n  " + bloc_ld(chalet) + "\n  " + m.group(2), t, flags=re.S)
+    return t
 
 
 if __name__ == "__main__":
     prix = valeurs()
     pages = [p for p in RACINE.rglob("index.html") if "outils" not in p.parts and ".impeccable" not in p.parts]
+    if (RACINE / "404.html").exists():
+        pages.append(RACINE / "404.html")
     for p in pages:
         traiter(p, prix)
         print("à jour :", p.relative_to(RACINE))
