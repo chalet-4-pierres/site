@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T11:54:19.670175+00:00",
+  "title": "Design System: Le Chalet des Quatre Pierres",
+  "extensions": {
+    "colorMeta": {
+      "orange-four": {
+        "role": "primary",
+        "displayName": "Orange des Quatre Pierres",
+        "canonical": "#b4531d",
+        "tonalRamp": [
+          "#362216",
+          "#603720",
+          "#8e4a24",
+          "#d16224",
+          "#da8758",
+          "#dead92",
+          "#e8d1c5",
+          "#f6f1ee"
+        ]
+      },
+      "orange-four-fonce": {
+        "role": "primary",
+        "displayName": "Orange brûlé",
+        "canonical": "#95431a",
+        "tonalRamp": [
+          "#362117",
+          "#5f3520",
+          "#8d4826",
+          "#ce5e26",
+          "#d8845a",
+          "#ddab93",
+          "#e7d1c5",
+          "#f6f1ee"
+        ]
+      },
+      "abricot": {
+        "role": "secondary",
+        "displayName": "Abricot du Pointu",
+        "canonical": "#e07a3f",
+        "tonalRamp": [
+          "#362216",
+          "#603720",
+          "#8e4b24",
+          "#d16324",
+          "#da8858",
+          "#dead92",
+          "#e8d2c5",
+          "#f6f1ee"
+        ]
+      },
+      "neige": {
+        "role": "neutral",
+        "displayName": "Neige",
+        "canonical": "#fafaf8",
+        "tonalRamp": [
+          "#2a2a23",
+          "#474738",
+          "#65654d",
+          "#8e8e66",
+          "#a8a88a",
+          "#c0c0af",
+          "#dadad2",
+          "#f3f3f1"
+        ]
+      },
+      "blanc": {
+        "role": "neutral",
+        "displayName": "Blanc",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#262626",
+          "#404040",
+          "#595959",
+          "#7a7a7a",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "granite": {
+        "role": "neutral",
+        "displayName": "Granite",
+        "canonical": "#eeedea",
+        "tonalRamp": [
+          "#292724",
+          "#44423b",
+          "#615d52",
+          "#87816e",
+          "#a29e90",
+          "#bdbab2",
+          "#d9d7d4",
+          "#f3f3f2"
+        ]
+      },
+      "filet-pierre": {
+        "role": "neutral",
+        "displayName": "Filet pierre",
+        "canonical": "#e4e1dc",
+        "tonalRamp": [
+          "#292723",
+          "#46413a",
+          "#635c50",
+          "#8a7e6b",
+          "#a59c8d",
+          "#beb9b1",
+          "#d9d7d3",
+          "#f3f2f1"
+        ]
+      },
+      "contour-bouton": {
+        "role": "neutral",
+        "displayName": "Contour bouton",
+        "canonical": "#cfc8c1",
+        "tonalRamp": [
+          "#292623",
+          "#45403a",
+          "#635950",
+          "#8a7a6b",
+          "#a4998e",
+          "#beb8b1",
+          "#d9d6d3",
+          "#f3f2f2"
+        ]
+      },
+      "anthracite": {
+        "role": "neutral",
+        "displayName": "Anthracite",
+        "canonical": "#2e2a27",
+        "tonalRamp": [
+          "#282624",
+          "#433f3c",
+          "#5f5853",
+          "#847971",
+          "#a09892",
+          "#bcb7b3",
+          "#d8d6d4",
+          "#f3f2f2"
+        ]
+      },
+      "brun-gris": {
+        "role": "neutral",
+        "displayName": "Brun gris",
+        "canonical": "#5f5852",
+        "tonalRamp": [
+          "#282625",
+          "#433f3c",
+          "#5f5954",
+          "#837a72",
+          "#a09892",
+          "#bbb7b4",
+          "#d8d6d4",
+          "#f3f2f2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Titre de page",
+        "purpose": "h1 de chaque page, en minuscules."
+      },
+      "headline": {
+        "displayName": "Titre de section",
+        "purpose": "h2 des sections."
+      },
+      "title": {
+        "displayName": "Sous-titre",
+        "purpose": "h3."
+      },
+      "body": {
+        "displayName": "Texte courant",
+        "purpose": "Paragraphes, 66 caractères au plus."
+      },
+      "intro": {
+        "displayName": "Introduction",
+        "purpose": "Phrase sous le titre, en brun gris."
+      },
+      "label": {
+        "displayName": "Libellé",
+        "purpose": "Boutons et termes en gras."
+      }
+    },
+    "shadows": [
+      {
+        "name": "menu-flottant",
+        "value": "0 12px 32px rgb(46 42 39 / 0.14)",
+        "purpose": "Menu ouvert sur téléphone, seule ombre du site."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Transitions de survol (0,25 s) et léger zoom de la photo d'ouverture (1,4 s)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "telephone",
+        "value": "640px"
+      },
+      {
+        "name": "tablette",
+        "value": "960px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Action principale, toujours « Faire une demande ».",
+      "html": "<a class=\"ds-btn\" href=\"#\">Faire une demande</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:999px;background:#b4531d;color:#fff;font:600 1rem Figtree,system-ui,sans-serif;text-decoration:none;transition:background-color .25s cubic-bezier(.16,1,.3,1)}.ds-btn:hover{background:#95431a}.ds-btn:focus-visible{outline:3px solid #b4531d;outline-offset:3px}"
+    },
+    {
+      "name": "Bouton secondaire",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Action secondaire, par exemple « Voir les disponibilités ».",
+      "html": "<a class=\"ds-btn2\" href=\"#\">Voir les disponibilités</a>",
+      "css": ".ds-btn2{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:999px;border:1.5px solid #cfc8c1;color:#2e2a27;font:600 1rem Figtree,system-ui,sans-serif;text-decoration:none;transition:border-color .25s}.ds-btn2:hover{border-color:#2e2a27}.ds-btn2:focus-visible{outline:3px solid #b4531d;outline-offset:3px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "En-tête : logo triangle, nom, liens et bouton principal.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-marque\" href=\"#\"><svg viewBox=\"0 0 48 42\" width=\"34\"><path d=\"M24 2.5 46 39.5H2Z\" fill=\"#e07a3f\" stroke=\"#e07a3f\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"17\" y=\"21\" width=\"6\" height=\"6\" rx=\"1.6\" fill=\"#fff\"/><rect x=\"25\" y=\"21\" width=\"6\" height=\"6\" rx=\"1.6\" fill=\"#fff\"/><rect x=\"17\" y=\"29\" width=\"6\" height=\"6\" rx=\"1.6\" fill=\"#fff\"/><rect x=\"25\" y=\"29\" width=\"6\" height=\"6\" rx=\"1.6\" fill=\"#fff\"/></svg>Le Chalet des Quatre Pierres</a><a href=\"#\">Le chalet</a><a href=\"#\" aria-current=\"page\">Tarifs</a><a href=\"#\">Venir</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:24px;font:500 1rem Figtree,system-ui,sans-serif;color:#2e2a27;background:#fafaf8;padding:16px}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a[aria-current]{color:#b4531d}.ds-nav a:hover{color:#b4531d}.ds-marque{display:inline-flex;align-items:center;gap:10px;font-weight:600;margin-right:auto}"
+    },
+    {
+      "name": "Panneau de prix",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Panneau blanc avec lignes libellé / valeur.",
+      "html": "<div class=\"ds-panneau\"><div class=\"ds-l\"><span>Nuit du samedi (obligatoire)</span><b>700 €</b></div><div class=\"ds-l\"><span>2e nuit</span><b>200 €</b></div><div class=\"ds-l ds-t\"><span>Week-end de 2 nuits</span><b>900 €</b></div></div>",
+      "css": ".ds-panneau{background:#fff;border-radius:16px;padding:28px;font:400 1rem/1.65 Figtree,system-ui,sans-serif;color:#2e2a27;font-variant-numeric:tabular-nums}.ds-l{display:flex;justify-content:space-between;padding:13px 0;border-top:1px solid #e4e1dc}.ds-l:first-child{border-top:0;padding-top:0}.ds-l b{font-weight:600}.ds-t span{font-weight:600}.ds-t b{color:#b4531d}"
+    },
+    {
+      "name": "Liste de points forts",
+      "kind": "custom",
+      "description": "Puces triangulaires abricot, terme en gras, phrase en brun gris.",
+      "html": "<ul class=\"ds-forts\"><li><svg viewBox=\"0 0 16 16\" width=\"14\"><path d=\"M8 1.5 15 14.5H1Z\" fill=\"#e07a3f\"/></svg><p><b>Un chalet écologique.</b><span>Bois massif, isolation en ouate de cellulose, puits canadien.</span></p></li></ul>",
+      "css": ".ds-forts{list-style:none;margin:0;padding:0;font:400 1rem/1.65 Figtree,system-ui,sans-serif;color:#2e2a27}.ds-forts li{display:grid;grid-template-columns:20px 1fr;gap:12px}.ds-forts svg{margin-top:6px}.ds-forts p{margin:0}.ds-forts b{display:block;font-weight:600}.ds-forts span{color:#5f5852}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La maison claire au bout du chemin",
+    "overview": "Le site ressemble au chalet un matin d'été : beaucoup de lumière, du blanc chaud, et la chaleur qui vient du bois et des photos, pas des aplats de couleur. La page respire. Un titre, une phrase, une photo, un bouton. L'orange ne sert qu'à dire « c'est ici qu'on agit » et à signer la marque.\n\nLa propriétaire a refusé une première version jugée lourde : grands aplats orange et bois, capitales condensées, chalet dessiné en coupe. Elle a validé la version claire, ronde et chaleureuse décrite ici. Les visiteurs (familles réunies, groupes d'amis) comparent avec les grandes plateformes de location : le site doit être aussi simple à lire qu'elles, en plus personnel.",
+    "keyCharacteristics": [
+      "Fond blanc chaud très clair, panneaux blancs, filets gris pierre.",
+      "Une seule police, Figtree, titres en minuscules et graisse 600.",
+      "Orange soutenu pour les boutons pleins, abricot pour le logo et les petits triangles.",
+      "Vraies photos du chalet, coins arrondis, jamais en plein écran.",
+      "Aucune ombre au repos, sauf le menu déroulant sur téléphone."
+    ],
+    "rules": [
+      {
+        "name": "La règle de l'orange qui agit",
+        "body": "L'orange soutenu est réservé aux actions et à l'état actif. Un bloc, un fond de section ou un titre en orange est hors système.",
+        "section": "colors"
+      },
+      {
+        "name": "La règle de l'abricot qui signe",
+        "body": "L'abricot signe la marque (logo, triangles de liste). Il ne porte jamais de texte.",
+        "section": "colors"
+      },
+      {
+        "name": "La règle des minuscules",
+        "body": "Les titres s'écrivent comme des phrases, jamais en capitales.",
+        "section": "typography"
+      },
+      {
+        "name": "La règle de l'espace insécable",
+        "body": "Un nombre ne se sépare jamais de son unité (240 m², 8 km, 16 h, 2 nuits, 1 700 €). Les noms propres courts restent groupés (Quatre Pierres, au cœur).",
+        "section": "typography"
+      },
+      {
+        "name": "La règle des chiffres alignés",
+        "body": "Les prix s'affichent en chiffres tabulaires, alignés à droite.",
+        "section": "typography"
+      },
+      {
+        "name": "La règle du plat au repos",
+        "body": "Aucune carte, aucun bouton, aucune photo n'a d'ombre.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do garder le fond neige et poser l'information dans des panneaux blancs ou entre des filets pierre.",
+      "Do réserver l'orange soutenu aux actions (boutons pleins, focus, état actif), avec du texte blanc.",
+      "Do écrire les titres en minuscules, en Figtree 600, et mettre des espaces insécables entre les nombres et leurs unités.",
+      "Do utiliser de vraies photos du chalet, arrondies à 16 px.",
+      "Do faire lire tous les prix dans assets/data/tarifs.json via outils/maj.py, jamais en dur."
+    ],
+    "donts": [
+      "Don't utiliser de grands aplats orange ou bois, ni de vert sapin : la propriétaire les a trouvés lourds.",
+      "Don't écrire les titres en capitales, ni utiliser de police condensée.",
+      "Don't ajouter de schémas décoratifs (comme le chalet dessiné en coupe), déjà essayés et refusés.",
+      "Don't mettre du texte en abricot ni du texte foncé sur un bouton orange.",
+      "Don't afficher de dates précises de périodes : elles changent chaque année."
+    ]
+  }
+}
