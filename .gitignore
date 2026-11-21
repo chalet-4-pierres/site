@@ -2,3 +2,4 @@
 .impeccable/review/
 .impeccable/questions/
 .impeccable/config.local.json
+outils/__pycache__/

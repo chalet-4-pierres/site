@@ -5,8 +5,14 @@
   <script>document.documentElement.classList.add("js")</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tarifs et disponibilités : location chalet 14 personnes à la semaine ou au week-end | Vosges</title>
-  <meta name="description" data-modele="Location du chalet entier de {semaine-min} à {semaine-max} la semaine, taxe de séjour incluse. Week-end à partir de {weekend-total} (2 nuits), hors vacances d'hiver et d'été. Consultez les dates libres et faites votre demande." content="Location du chalet entier de 1 700 € à 3 300 € la semaine, taxe de séjour incluse. Week-end à partir de 900 € (2 nuits), hors vacances d'hiver et d'été. Consultez les dates libres et faites votre demande.">
+  <meta name="description" data-modele="Location du chalet entier de {semaine-min} à {semaine-max} la semaine, taxe de séjour incluse. Week-end à partir de {weekend-total} (2 nuits), hors vacances d'hiver et d'été. Consultez les dates libres et faites votre demande." content="Location du chalet entier de 1 700 € à 3 300 € la semaine, taxe de séjour incluse. Week-end à partir de 900 € (2 nuits), hors vacances d'hiver et d'été. Consultez les dates libres et faites votre demande.">
   <link rel="canonical" href="https://www.chalet-4-pierres-location.fr/tarifs/">
+  <!-- debut:langues -->
+  <link rel="alternate" hreflang="fr" href="https://www.chalet-4-pierres-location.fr/tarifs/">
+  <link rel="alternate" hreflang="en" href="https://www.chalet-4-pierres-location.fr/en/rates/">
+  <link rel="alternate" hreflang="de" href="https://www.chalet-4-pierres-location.fr/de/preise/">
+  <link rel="alternate" hreflang="x-default" href="https://www.chalet-4-pierres-location.fr/tarifs/">
+  <!-- fin:langues -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Le Chalet des Quatre Pierres">
@@ -28,6 +34,7 @@
         <svg viewBox="0 0 48 42" aria-hidden="true"><path d="M24 2.5 46 39.5H2Z" fill="#e07a3f" stroke="#e07a3f" stroke-width="3" stroke-linejoin="round"/><rect x="17" y="21" width="6" height="6" rx="1.6" fill="#fff"/><rect x="25" y="21" width="6" height="6" rx="1.6" fill="#fff"/><rect x="17" y="29" width="6" height="6" rx="1.6" fill="#fff"/><rect x="25" y="29" width="6" height="6" rx="1.6" fill="#fff"/></svg>
         <span class="marque-nom">Le Chalet des Quatre&nbsp;Pierres</span>
       </a>
+      <div class="entete-actions">
       <nav class="navigation" aria-label="Menu principal">
         <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
         <ul id="menu">
@@ -38,8 +45,11 @@
           <li><a href="/ete/">Été</a></li>
           <li><a href="/questions/">Questions</a></li>
           <li><a class="bouton bouton-plein" href="/reserver/">Faire une demande</a></li>
+          <li class="menu-langues"><ul class="langues" aria-label="Langue"><li><a href="/tarifs/" hreflang="fr" lang="fr" title="Français" aria-current="true">FR</a></li><li><a href="/en/rates/" hreflang="en" lang="en" title="English">EN</a></li><li><a href="/de/preise/" hreflang="de" lang="de" title="Deutsch">DE</a></li></ul></li>
         </ul>
       </nav>
+      <ul class="langues" aria-label="Langue"><li><a href="/tarifs/" hreflang="fr" lang="fr" title="Français" aria-current="true">FR</a></li><li><a href="/en/rates/" hreflang="en" lang="en" title="English">EN</a></li><li><a href="/de/preise/" hreflang="de" lang="de" title="Deutsch">DE</a></li></ul>
+      </div>
     </div>
   </header>
   <!-- fin:entete -->
@@ -63,13 +73,13 @@
           <table class="table-prix">
             <thead><tr><th scope="col">Période</th><th scope="col">Prix de la semaine</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Janvier à début février</th><td data-prix="semaine-janvier">1 700 €</td></tr>
-              <tr><th scope="row">Vacances d'hiver (février-mars)</th><td data-prix="semaine-hiver">2 000 €</td></tr>
-              <tr><th scope="row">Mars à début juillet</th><td data-prix="semaine-printemps">1 700 €</td></tr>
-              <tr><th scope="row">Vacances d'été (juillet-août)</th><td data-prix="semaine-ete">2 000 €</td></tr>
-              <tr><th scope="row">Septembre à mi-décembre</th><td data-prix="semaine-automne">1 700 €</td></tr>
-              <tr><th scope="row">Semaine de Noël</th><td data-prix="semaine-noel">3 300 €</td></tr>
-              <tr><th scope="row">Semaine du Nouvel An</th><td data-prix="semaine-nouvel-an">3 300 €</td></tr>
+              <tr><th scope="row">Janvier à début février</th><td data-prix="semaine-janvier">1 700 €</td></tr>
+              <tr><th scope="row">Vacances d'hiver (février-mars)</th><td data-prix="semaine-hiver">2 000 €</td></tr>
+              <tr><th scope="row">Mars à début juillet</th><td data-prix="semaine-printemps">1 700 €</td></tr>
+              <tr><th scope="row">Vacances d'été (juillet-août)</th><td data-prix="semaine-ete">2 000 €</td></tr>
+              <tr><th scope="row">Septembre à mi-décembre</th><td data-prix="semaine-automne">1 700 €</td></tr>
+              <tr><th scope="row">Semaine de Noël</th><td data-prix="semaine-noel">3 300 €</td></tr>
+              <tr><th scope="row">Semaine du Nouvel An</th><td data-prix="semaine-nouvel-an">3 300 €</td></tr>
             </tbody>
           </table>
         </div>
@@ -77,9 +87,9 @@
         <div class="panneau">
           <h2>Au week-end, hors vacances d'hiver et d'été et fêtes de fin d'année</h2>
           <dl class="lignes-prix">
-            <div><dt>Nuit du samedi (obligatoire)</dt><dd data-prix="weekend-samedi">700 €</dd></div>
-            <div><dt>2e nuit, le vendredi ou le dimanche</dt><dd data-prix="weekend-deuxieme-nuit">200 €</dd></div>
-            <div class="total"><dt>Soit, pour un week-end de 2&nbsp;nuits</dt><dd data-prix="weekend-total">900 €</dd></div>
+            <div><dt>Nuit du samedi (obligatoire)</dt><dd data-prix="weekend-samedi">700 €</dd></div>
+            <div><dt>2e nuit, le vendredi ou le dimanche</dt><dd data-prix="weekend-deuxieme-nuit">200 €</dd></div>
+            <div class="total"><dt>Soit, pour un week-end de 2&nbsp;nuits</dt><dd data-prix="weekend-total">900 €</dd></div>
           </dl>
           <p class="note">Pendant les vacances d'hiver et d'été, à Noël et au Nouvel An, le chalet se loue uniquement à la semaine. Pendant les vacances de printemps et de la Toussaint, il se loue aussi au week-end.</p>
         </div>
@@ -91,9 +101,9 @@
         <div>
           <h2>Options</h2>
           <dl class="lignes-prix">
-            <div><dt>Draps et housses de couette</dt><dd><span data-prix="option-draps">12 €</span> par lit</dd></div>
-            <div><dt>Bois pour le poêle</dt><dd data-prix="option-bois">50 €</dd></div>
-            <div><dt>Ménage de fin de séjour</dt><dd data-prix="option-menage">90 €</dd></div>
+            <div><dt>Draps et housses de couette</dt><dd><span data-prix="option-draps">12 €</span> par lit</dd></div>
+            <div><dt>Bois pour le poêle</dt><dd data-prix="option-bois">50 €</dd></div>
+            <div><dt>Ménage de fin de séjour</dt><dd data-prix="option-menage">90 €</dd></div>
           </dl>
           <p class="note">Les serviettes de bain et les torchons de cuisine ne sont plus fournis depuis les mesures sanitaires liées au Covid-19.</p>
         </div>
@@ -108,7 +118,7 @@
         <div>
           <h2>Paiement</h2>
           <ul class="liste-simple">
-            <li>Acompte de <span data-prix="acompte">250 €</span> à la réservation, par virement ou par chèque</li>
+            <li>Acompte de <span data-prix="acompte">250 €</span> à la réservation, par virement ou par chèque</li>
             <li>Solde par virement 15&nbsp;jours avant l'arrivée, ou sur place en espèces ou par chèque</li>
             <li>Les chèques-vacances ne sont pas acceptés</li>
           </ul>

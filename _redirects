@@ -22,3 +22,7 @@
 /images/conditions-generales-de-location.pdf          /conditions/                301
 /images/formulaire-de-location.pdf                    /reserver/                  301
 /images/formulaire-de-location-we.pdf                 /reserver/                  301
+
+# Pages introuvables : page 404 dans la langue du visiteur
+/en/*                                                 /en/404.html                404
+/de/*                                                 /de/404.html                404
