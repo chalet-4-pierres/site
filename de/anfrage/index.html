@@ -64,10 +64,10 @@
 
     <section class="bloc" aria-label="Anfrageformular">
       <div class="conteneur reservation-grille">
-        <form class="formulaire" name="demande" method="POST" action="/de/danke/" data-netlify="true" netlify-honeypot="adresse-web" novalidate>
+        <form class="formulaire" name="demande" method="POST" action="/de/danke/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
           <input type="hidden" name="form-name" value="demande">
           <input type="hidden" name="langue" value="allemand">
-          <p class="cache"><label>Bitte nicht ausfüllen: <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
+          <p class="cache" aria-hidden="true"><label>Bitte nicht ausfüllen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <div class="champs">
             <div class="champ"><label for="nom">Vor- und Nachname</label><input type="text" id="nom" name="nom" autocomplete="name" required></div>
             <div class="champ"><label for="email">E-Mail</label><input type="email" id="email" name="email" autocomplete="email" required></div>

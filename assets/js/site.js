@@ -238,7 +238,23 @@
     var nbLits = parseInt(champLits.value, 10) || 0;
     verifier(champLits, nbLits >= 0 && nbLits <= 10, txt("errLits"));
     verifier(form.cgv, form.cgv.checked, txt("errCgv"));
-    if (premier) { e.preventDefault(); premier.focus(); }
+    if (premier) { e.preventDefault(); premier.focus(); return; }
+    // Envoi en arrière-plan, puis page de remerciement dans la langue de la page
+    if (!window.fetch || !window.URLSearchParams) return;
+    e.preventDefault();
+    var bouton = form.querySelector("button[type=submit]");
+    if (bouton) bouton.disabled = true;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      window.location.href = form.getAttribute("action");
+    }).catch(function () {
+      if (bouton) bouton.disabled = false;
+      HTMLFormElement.prototype.submit.call(form);
+    });
   });
   form.querySelectorAll("input, textarea").forEach(function (c) {
     c.addEventListener("input", function () { if (c.getAttribute("aria-invalid")) erreur(c, ""); });
