@@ -23,7 +23,7 @@ Réservation en deux temps : demande via le formulaire, réponse par mail sous 4
 
 ## Capabilities and Constraints
 - Français d'abord ; anglais et allemand plus tard, avec des adresses traduites.
-- Aucune coordonnée personnelle publiée (ni téléphone, ni email personnel, ni adresse personnelle). Seule exception : l'adresse contact@ du domaine, sur la page des mentions légales.
+- Aucune coordonnée personnelle publiée (ni téléphone, ni email personnel, ni adresse personnelle). Seule exception : l'adresse lechalet88@free.fr, sur la page des mentions légales, protégée contre les robots.
 - Ne jamais citer ni lier de concurrents de Cirkwi.
 - Pas de piscine, pas de jacuzzi : ne pas vendre un luxe qui n'existe pas. Classement 4 étoiles mentionné, pas mis en avant.
 - Google Analytics avec bandeau de consentement aux cookies.
