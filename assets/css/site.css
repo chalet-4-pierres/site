@@ -302,8 +302,10 @@ fieldset.champ { border: 0; padding: 0; margin: 0; }
 .texte-legal li { margin-bottom: 0.4rem; }
 
 /* Bandeau cookies */
-.bandeau-cookies { position: fixed; z-index: 20; left: 1rem; right: 1rem; bottom: 1rem; max-width: 34rem; margin-left: auto; background: var(--blanc); border-radius: var(--rayon); padding: 1.25rem 1.35rem; box-shadow: 0 12px 32px rgb(46 42 39 / 0.18); font-size: 0.95rem; }
+.bandeau-cookies { position: fixed; z-index: 20; left: 1rem; right: 1rem; bottom: 1rem; max-width: 34rem; margin-right: auto; background: var(--blanc); border-radius: var(--rayon); padding: 1.25rem 1.35rem; box-shadow: 0 12px 32px rgb(46 42 39 / 0.18); font-size: 0.95rem; }
 .bandeau-cookies[hidden] { display: none; }
+/* Le badge Netlify occupe le coin bas droit : le bandeau reste à gauche, et monte au-dessus sur mobile */
+@media (max-width: 720px) { .bandeau-cookies { bottom: 4.5rem; } }
 .bandeau-cookies p { margin: 0 0 1rem; color: var(--texte-doux); }
 .bandeau-cookies .actions .bouton { min-height: 2.6rem; padding: 0.5rem 1.1rem; }
 .lien-bouton { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: none; }

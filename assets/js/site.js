@@ -3,7 +3,7 @@
   var doc = document.documentElement;
   doc.classList.add("js");
   var LANGUE = (doc.lang || "fr").slice(0, 2);
-  if (["fr", "en", "de"].indexOf(LANGUE) < 0) LANGUE = "fr";
+  if (["fr", "en", "de", "nl"].indexOf(LANGUE) < 0) LANGUE = "fr";
 
   // Textes affichés par le script, dans les 3 langues
   var TEXTES = {
@@ -69,6 +69,27 @@
       errPersonnes: "Bitte geben Sie eine Personenzahl zwischen 1 und 14 ein.",
       errLits: "Das Chalet hat 10 Betten: Bitte geben Sie eine Zahl zwischen 0 und 10 ein.",
       errCgv: "Um Ihre Anfrage zu senden, akzeptieren Sie bitte die Mietbedingungen."
+    },
+    nl: {
+      locale: "nl-NL",
+      dates: "Vul uw data in om een prijsindicatie te zien.",
+      optionsChoisies: "Gekozen extra's: {o}.",
+      options: " Extra's: {o}.",
+      semaine: "Een week: van {a} tot {b}, inclusief extra's.",
+      semaineDetail: "De prijs hangt af van de periode (laagseizoen, schoolvakanties, kerst en oud en nieuw).{o} We bevestigen de exacte prijs in ons antwoord.",
+      weekend2: "Een weekend van 2 nachten: {p}, inclusief extra's.",
+      weekend1: "1 nacht: {p}, inclusief extra's.",
+      minimum: "Het minimale verblijf is 2 nachten. ",
+      weekendDetail: "Weekendprijs, buiten de Franse winter- en zomervakantie, kerst en oud en nieuw.{o} We bevestigen de prijs in ons antwoord.",
+      autres: "{n} nachten: prijs op aanvraag.",
+      autresDetail: "We doen u in ons antwoord een prijsvoorstel, afhankelijk van de periode.{o}",
+      errNom: "Vul uw voor- en achternaam in.",
+      errEmail: "Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.nl.",
+      errArrivee: "Kies een aankomstdatum.",
+      errDepart: "Kies een vertrekdatum na de aankomstdatum.",
+      errPersonnes: "Vul een aantal personen in tussen 1 en 14.",
+      errLits: "Het chalet heeft 10 bedden: vul een aantal in tussen 0 en 10.",
+      errCgv: "Om uw aanvraag te versturen, gaat u akkoord met de huurvoorwaarden."
     }
   };
   var T = TEXTES[LANGUE];

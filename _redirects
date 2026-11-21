@@ -26,3 +26,4 @@
 # Pages introuvables : page 404 dans la langue du visiteur
 /en/*                                                 /en/404.html                404
 /de/*                                                 /de/404.html                404
+/nl/*                                                 /nl/404.html                404

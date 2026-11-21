@@ -3,5 +3,6 @@ Allow: /
 Disallow: /merci/
 Disallow: /en/thank-you/
 Disallow: /de/danke/
+Disallow: /nl/bedankt/
 
 Sitemap: https://www.chalet-4-pierres-location.fr/sitemap.xml

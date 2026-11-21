@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Met à jour toutes les pages du site (français, anglais, allemand).
+"""Met à jour toutes les pages du site (français, anglais, allemand, néerlandais).
 
 1. Recopie l'en-tête et le pied de page de la bonne langue (outils/morceaux/)
    dans chaque page, entre les repères <!-- debut:xxx --> et <!-- fin:xxx -->,
@@ -19,26 +19,26 @@ import json, re, pathlib, datetime, html as _h
 RACINE = pathlib.Path(__file__).resolve().parent.parent
 MORCEAUX = RACINE / "outils" / "morceaux"
 SITE = "https://www.chalet-4-pierres-location.fr"
-LANGUES = ("fr", "en", "de")
-NOMS = {"fr": "Français", "en": "English", "de": "Deutsch"}
+LANGUES = ("fr", "en", "de", "nl")
+NOMS = {"fr": "Français", "en": "English", "de": "Deutsch", "nl": "Nederlands"}
 
-# Chaque page dans les 3 langues : (fr, en, de). "index" = dans le sitemap.
+# Chaque page dans les 4 langues : (fr, en, de, nl, dans le sitemap ?).
 PAGES = {
-    "accueil":    ("/", "/en/", "/de/", True),
-    "chalet":     ("/le-chalet/", "/en/the-chalet/", "/de/das-chalet/", True),
-    "tarifs":     ("/tarifs/", "/en/rates/", "/de/preise/", True),
-    "reserver":   ("/reserver/", "/en/booking/", "/de/anfrage/", True),
-    "venir":      ("/venir/", "/en/getting-here/", "/de/anreise/", True),
-    "hiver":      ("/hiver/", "/en/winter/", "/de/winter/", True),
-    "ete":        ("/ete/", "/en/summer/", "/de/sommer/", True),
-    "questions":  ("/questions/", "/en/faq/", "/de/fragen/", True),
-    "conditions": ("/conditions/", "/en/terms/", "/de/mietbedingungen/", True),
-    "mentions":   ("/mentions-legales/", "/en/legal-notice/", "/de/impressum/", True),
-    "merci":      ("/merci/", "/en/thank-you/", "/de/danke/", False),
+    "accueil":    ("/", "/en/", "/de/", "/nl/", True),
+    "chalet":     ("/le-chalet/", "/en/the-chalet/", "/de/das-chalet/", "/nl/het-chalet/", True),
+    "tarifs":     ("/tarifs/", "/en/rates/", "/de/preise/", "/nl/prijzen/", True),
+    "reserver":   ("/reserver/", "/en/booking/", "/de/anfrage/", "/nl/aanvraag/", True),
+    "venir":      ("/venir/", "/en/getting-here/", "/de/anreise/", "/nl/route/", True),
+    "hiver":      ("/hiver/", "/en/winter/", "/de/winter/", "/nl/winter/", True),
+    "ete":        ("/ete/", "/en/summer/", "/de/sommer/", "/nl/zomer/", True),
+    "questions":  ("/questions/", "/en/faq/", "/de/fragen/", "/nl/vragen/", True),
+    "conditions": ("/conditions/", "/en/terms/", "/de/mietbedingungen/", "/nl/huurvoorwaarden/", True),
+    "mentions":   ("/mentions-legales/", "/en/legal-notice/", "/de/impressum/", "/nl/juridische-informatie/", True),
+    "merci":      ("/merci/", "/en/thank-you/", "/de/danke/", "/nl/bedankt/", False),
 }
 PAR_URL = {}
-for cle, (fr, en, de, _) in PAGES.items():
-    for lg, url in zip(LANGUES, (fr, en, de)):
+for cle, (*urls, _) in PAGES.items():
+    for lg, url in zip(LANGUES, urls):
         PAR_URL[url] = (cle, lg)
 
 
@@ -47,6 +47,8 @@ def euros(n, lg):
         return f"€{n:,}"
     if lg == "de":
         return f"{n:,}".replace(",", ".") + " €"
+    if lg == "nl":
+        return "€ " + f"{n:,}".replace(",", ".")
     return f"{n:,}".replace(",", " ") + " €"
 
 
@@ -73,7 +75,7 @@ def page_courante(chemin):
 
 def langue_de(chemin):
     rel = chemin.relative_to(RACINE).as_posix()
-    return rel[:2] if rel[:3] in ("en/", "de/") else "fr"
+    return rel[:2] if rel[:3] in ("en/", "de/", "nl/") else "fr"
 
 
 def selecteur(url, lg):
@@ -83,7 +85,7 @@ def selecteur(url, lg):
         cible = PAGES[cle][LANGUES.index(autre)] if cle else ("/" if autre == "fr" else f"/{autre}/")
         courant = ' aria-current="true"' if autre == lg else ""
         liens.append(f'<li><a href="{cible}" hreflang="{autre}" lang="{autre}" title="{NOMS[autre]}"{courant}>{autre.upper()}</a></li>')
-    etiquette = {"fr": "Langue", "en": "Language", "de": "Sprache"}[lg]
+    etiquette = {"fr": "Langue", "en": "Language", "de": "Sprache", "nl": "Taal"}[lg]
     return f'<ul class="langues" aria-label="{etiquette}">' + "".join(liens) + "</ul>"
 
 
@@ -91,7 +93,7 @@ def alternates(url):
     cle = PAR_URL.get(url, (None,))[0]
     if not cle:
         return ""
-    urls = PAGES[cle][:3]
+    urls = PAGES[cle][:4]
     lignes = [f'<link rel="alternate" hreflang="{lg}" href="{SITE}{u}">' for lg, u in zip(LANGUES, urls)]
     lignes.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{urls[0]}">')
     return "\n  ".join(lignes)
@@ -157,6 +159,12 @@ CHALET = {
         "equipements": ["WLAN", "Holzofen", "Geschirrspüler", "Waschmaschine", "Wäschetrockner", "Terrasse", "Skiraum", "Babybett"],
         "etoiles": "Offiziell mit 4 Sternen klassifizierte Ferienunterkunft",
     },
+    "nl": {
+        "description": "Ecologisch chalet van massief hout, 240 m² voor 14 personen in Grand Valtin, op 8 km van Gérardmer in de Vogezen, Frankrijk. 6 slaapkamers, een badkamer en toilet op elke verdieping.",
+        "semaine": "per week",
+        "equipements": ["Wifi", "Houtkachel", "Vaatwasser", "Wasmachine", "Droger", "Terras", "Skiruimte", "Babybedje"],
+        "etoiles": "Officieel geclassificeerd vakantiehuis met 4 sterren",
+    },
 }
 
 
@@ -208,7 +216,7 @@ def sitemap():
 if __name__ == "__main__":
     prix = {lg: valeurs(lg) for lg in LANGUES}
     pages = [p for p in RACINE.rglob("index.html") if "outils" not in p.parts and ".impeccable" not in p.parts]
-    pages += [p for p in (RACINE / "404.html", RACINE / "en/404.html", RACINE / "de/404.html") if p.exists()]
+    pages += [p for p in (RACINE / "404.html", RACINE / "en/404.html", RACINE / "de/404.html", RACINE / "nl/404.html") if p.exists()]
     for p in sorted(pages):
         traiter(p, prix)
         print("à jour :", p.relative_to(RACINE))
