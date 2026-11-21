@@ -1,18 +1,15 @@
 {
-  "_note": "Source unique des prix du site. Changer un prix ici le change partout. Pas de dates précises : les périodes changent chaque année.",
-  "taxeDeSejourIncluse": true,
-  "semaine": [
-    { "periode": "Intersaison : mars à juillet", "prix": 1700 },
-    { "periode": "Vacances d'été : juillet et août", "prix": 2000 },
-    { "periode": "Intersaison : septembre à mi-décembre", "prix": 1700 },
-    { "periode": "Noël", "prix": 3300 },
-    { "periode": "Nouvel An", "prix": 3300 },
-    { "periode": "Janvier à début février", "prix": 1700 },
-    { "periode": "Vacances d'hiver : février à mars", "prix": 2000 }
-  ],
-  "weekEnd": { "nuitDuSamedi": 700, "deuxiemeNuit": 200, "minimumNuits": 2 },
-  "options": { "drapsParLit": 12, "bois": 50, "menage": 90 },
-  "acompte": 250,
-  "arrivee": "16 h",
-  "depart": "10 h"
+  "_note": "Source unique des prix du site. Après un changement ici, lancer : python3 outils/maj.py. Pas de dates précises : les périodes changent chaque année.",
+  "semaine": {
+    "janvier": 1700,
+    "hiver": 2000,
+    "printemps": 1700,
+    "ete": 2000,
+    "automne": 1700,
+    "noel": 3300,
+    "nouvel-an": 3300
+  },
+  "week-end": { "samedi": 700, "deuxieme-nuit": 200 },
+  "options": { "draps": 12, "bois": 50, "menage": 90 },
+  "acompte": 250
 }

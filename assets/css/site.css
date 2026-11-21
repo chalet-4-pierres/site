@@ -170,3 +170,39 @@ p { margin: 0 0 1rem; max-width: var(--mesure); }
   .chiffres div { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
   .actions .bouton { flex: 1 1 100%; }
 }
+
+/* Pages intérieures */
+.page-titre { padding-block: clamp(1.5rem, 4vw, 3.5rem) clamp(2.5rem, 5vw, 4rem); }
+.page-titre h1 { margin-bottom: 1rem; }
+.page-titre .intro { font-size: 1.15rem; color: var(--texte-doux); max-width: 52ch; margin-bottom: 1.75rem; }
+.navigation a[aria-current="page"]:not(.bouton) { color: var(--orange); }
+
+/* Tarifs */
+.tarifs { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.tarifs h2, .infos h2 { font-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.6rem); margin-bottom: 1.25rem; }
+.table-prix { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.table-prix th, .table-prix td { padding: 0.95rem 0; border-top: 1px solid var(--trait); text-align: left; font-weight: 400; }
+.table-prix thead th { border-top: 0; padding-top: 0; font-size: 0.9rem; color: var(--texte-doux); }
+.table-prix td, .table-prix thead th:last-child { text-align: right; }
+.table-prix td { font-weight: 600; white-space: nowrap; padding-left: 1rem; }
+.table-prix tbody tr:last-child th, .table-prix tbody tr:last-child td { border-bottom: 1px solid var(--trait); }
+.panneau { background: var(--blanc); border-radius: var(--rayon); padding: clamp(1.5rem, 3vw, 2.25rem); }
+.lignes-prix { margin: 0; font-variant-numeric: tabular-nums; }
+.lignes-prix div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.85rem 0; border-top: 1px solid var(--trait); }
+.lignes-prix div:first-child { border-top: 0; padding-top: 0; }
+.lignes-prix dd { margin: 0; font-weight: 600; white-space: nowrap; }
+.lignes-prix .total dt, .lignes-prix .total dd { font-weight: 600; }
+.lignes-prix .total dd { color: var(--orange); }
+.note { color: var(--texte-doux); font-size: 0.95rem; margin: 1.25rem 0 0; }
+.infos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(2rem, 4vw, 3.5rem); }
+.liste-simple { list-style: none; margin: 0; padding: 0; }
+.liste-simple li { padding: 0.85rem 0; border-top: 1px solid var(--trait); }
+.liste-simple li:first-child { border-top: 0; padding-top: 0; }
+.agenda-attente { display: grid; place-items: center; min-height: 18rem; border-radius: var(--rayon); background: var(--blanc); border: 1.5px dashed #d6d0c9; padding: 2rem; text-align: center; color: var(--texte-doux); }
+.agenda-attente p { margin: 0; }
+.dispo-pied { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 1.5rem; }
+.dispo-pied p { margin: 0; color: var(--texte-doux); }
+
+@media (max-width: 960px) {
+  .tarifs, .infos { grid-template-columns: minmax(0, 1fr); }
+}
