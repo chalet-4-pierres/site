@@ -12,3 +12,6 @@ Domaine de production : chalet-4-pierres-location.fr
 
 ## État
 En construction. L'ancien site reste en ligne jusqu'à la bascule.
+
+## Règle de confidentialité
+Ce dépôt est public. Il ne doit contenir aucune information privée : pas de téléphone, d'email personnel, de RIB, d'adresse postale personnelle ni de mot de passe. L'adresse qui reçoit les demandes du formulaire se règle dans Netlify, pas ici.
