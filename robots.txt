@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /merci/
 
-Sitemap: https://chalet-4-pierres-location.fr/sitemap.xml
+Sitemap: https://www.chalet-4-pierres-location.fr/sitemap.xml
