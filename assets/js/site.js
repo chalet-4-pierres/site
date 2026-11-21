@@ -115,7 +115,8 @@
   function estimer() {
     if (!sortie || !prix) return;
     var opt = 0;
-    var lits = parseInt(form.draps_lits.value, 10) || 0;
+    var champLits = form.querySelector("#draps_lits");
+    var lits = parseInt(champLits.value, 10) || 0;
     if (form.option_draps.checked && lits > 0) opt += lits * prix.options.draps;
     if (form.option_bois.checked) opt += prix.options.bois;
     if (form.option_menage.checked) opt += prix.options.menage;
@@ -142,6 +143,8 @@
     sortie.innerHTML = "<strong></strong><p></p>";
     sortie.querySelector("strong").textContent = titre;
     sortie.querySelector("p").textContent = detail;
+    var cache = form.querySelector("input[name='Estimation affichée']");
+    if (cache) cache.value = titre + (detail ? " " + detail : "");
   }
   form.addEventListener("input", estimer);
   form.addEventListener("change", estimer);
@@ -171,6 +174,9 @@
     verifier(form.depart, !!form.depart.value && (!form.arrivee.value || nuits()), "Choisissez une date de départ après la date d'arrivée.");
     var p = parseInt(form.personnes.value, 10);
     verifier(form.personnes, p >= 1 && p <= 14, "Indiquez un nombre de personnes entre 1 et 14.");
+    var champLits = form.querySelector("#draps_lits");
+    var nbLits = parseInt(champLits.value, 10) || 0;
+    verifier(champLits, nbLits >= 0 && nbLits <= 10, "Le chalet compte 10 lits : indiquez un nombre entre 0 et 10.");
     verifier(form.cgv, form.cgv.checked, "Pour envoyer votre demande, acceptez les conditions de location.");
     if (premier) { e.preventDefault(); premier.focus(); }
   });

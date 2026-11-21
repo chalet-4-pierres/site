@@ -76,12 +76,13 @@
           <fieldset class="champ">
             <legend>Options</legend>
             <div class="option-ligne case"><label><input type="checkbox" name="option_draps" value="oui"> Draps et housses de couette</label>
-              <label for="draps_lits" class="aide">pour</label><input type="number" id="draps_lits" name="draps_lits" min="0" max="10" value="0" inputmode="numeric" aria-label="Nombre de lits pour les draps"><span class="aide">lits</span>
+              <label for="draps_lits" class="aide">pour</label><input type="number" id="draps_lits" name="Nombre de lits (draps)" min="0" max="10" value="0" inputmode="numeric" aria-label="Nombre de lits pour les draps"><span class="aide">lits</span>
               <span class="prix-option"><span data-prix="option-draps">12 €</span> par lit</span></div>
             <div class="option-ligne case"><label><input type="checkbox" name="option_bois" value="oui"> Bois pour le poêle</label><span class="prix-option" data-prix="option-bois">50 €</span></div>
             <div class="option-ligne case"><label><input type="checkbox" name="option_menage" value="oui"> Ménage de fin de séjour</label><span class="prix-option" data-prix="option-menage">90 €</span></div>
           </fieldset>
           <div class="champ"><label for="message">Message <span class="aide">(facultatif)</span></label><textarea id="message" name="message" rows="4"></textarea></div>
+          <input type="hidden" name="Estimation affichée" value="">
           <div class="estimation" data-estimation aria-live="polite"><strong>Indiquez vos dates pour voir une estimation.</strong></div>
           <div class="champ case"><label><input type="checkbox" id="cgv" name="cgv" value="acceptées" required> J'ai lu et j'accepte les <a href="/conditions/" target="_blank">conditions générales de location</a></label></div>
           <div><button class="bouton bouton-plein" type="submit">Envoyer ma demande</button></div>
