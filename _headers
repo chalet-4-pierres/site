@@ -1,0 +1,4 @@
+# Version de test : aucune page ne doit être indexée avant la bascule.
+# À retirer le jour de la bascule.
+/*
+  X-Robots-Tag: noindex, nofollow
