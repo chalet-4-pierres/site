@@ -1,19 +1,18 @@
 {
-  "_note": "Source unique des prix et des périodes du site. Changer un prix ici le change partout. Les dates de début et de fin des périodes sont à confirmer par la propriétaire.",
+  "_note": "Source unique des prix du site. Changer un prix ici le change partout. Pas de dates précises : les périodes changent chaque année.",
   "taxeDeSejourIncluse": true,
+  "semaine": [
+    { "periode": "Intersaison : mars à juillet", "prix": 1700 },
+    { "periode": "Vacances d'été : juillet et août", "prix": 2000 },
+    { "periode": "Intersaison : septembre à mi-décembre", "prix": 1700 },
+    { "periode": "Noël", "prix": 3300 },
+    { "periode": "Nouvel An", "prix": 3300 },
+    { "periode": "Janvier à début février", "prix": 1700 },
+    { "periode": "Vacances d'hiver : février à mars", "prix": 2000 }
+  ],
   "weekEnd": { "nuitDuSamedi": 700, "deuxiemeNuit": 200, "minimumNuits": 2 },
   "options": { "drapsParLit": 12, "bois": 50, "menage": 90 },
   "acompte": 250,
   "arrivee": "16 h",
-  "depart": "10 h",
-  "periodes": [
-    { "id": "intersaison-automne-2026", "nom": "Intersaison", "debut": "2026-08-29", "fin": "2026-12-19", "semaine": 1700, "weekEnd": true, "vacances": false },
-    { "id": "noel-2026", "nom": "Noël", "debut": "2026-12-19", "fin": "2026-12-26", "semaine": 3300, "weekEnd": false, "vacances": true },
-    { "id": "nouvel-an-2027", "nom": "Nouvel An", "debut": "2026-12-26", "fin": "2027-01-02", "semaine": 3300, "weekEnd": false, "vacances": true },
-    { "id": "janvier-2027", "nom": "Janvier", "debut": "2027-01-02", "fin": "2027-02-06", "semaine": 1700, "weekEnd": true, "vacances": false },
-    { "id": "hiver-2027", "nom": "Vacances d'hiver", "debut": "2027-02-06", "fin": "2027-03-06", "semaine": 2000, "weekEnd": false, "vacances": true },
-    { "id": "printemps-2027", "nom": "Intersaison", "debut": "2027-03-06", "fin": "2027-07-03", "semaine": 1700, "weekEnd": true, "vacances": false },
-    { "id": "ete-2027", "nom": "Vacances d'été", "debut": "2027-07-03", "fin": "2027-08-28", "semaine": 2000, "weekEnd": false, "vacances": true },
-    { "id": "intersaison-automne-2027", "nom": "Intersaison", "debut": "2027-08-28", "fin": "2027-12-18", "semaine": 1700, "weekEnd": true, "vacances": false }
-  ]
+  "depart": "10 h"
 }
